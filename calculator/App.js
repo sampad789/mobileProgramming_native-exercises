@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput, Alert,FlatList } from 'react-native';
-import {StackNavigator} from 'react-navigation';
+
 
 export default class App extends React.Component {
 
-    static navigationOptions = {title : 'FirstPage'} ;
+    
 
 
 
@@ -58,9 +58,7 @@ export default class App extends React.Component {
       });
       this.setState({data: [...this.state.data, {key: list}], total:total});
     } 
-    
   
-
   render() {
     return (
       <View style={styles.container}>
@@ -75,7 +73,7 @@ export default class App extends React.Component {
         <Button title="-" onPress={this.buttonSubtract}/>
         <Button title="x" onPress={this.buttonMultiply} />
         <Button title="÷" onPress={this.buttonDivision} />
-        <Button onPress ={ () => navigate('History')} title ='HISTORY' />
+       
         
         </View>
         <View style ={styles.List}  >
